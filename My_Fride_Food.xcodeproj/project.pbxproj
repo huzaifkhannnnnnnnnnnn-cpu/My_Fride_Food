@@ -14,6 +14,7 @@
 		52875E532F1A590E00FB42D1 /* My_Fride_FoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E522F1A590E00FB42D1 /* My_Fride_FoodTests.swift */; };
 		52875E5D2F1A590E00FB42D1 /* My_Fride_FoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E5C2F1A590E00FB42D1 /* My_Fride_FoodUITests.swift */; };
 		52875E5F2F1A590E00FB42D1 /* My_Fride_FoodUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E5E2F1A590E00FB42D1 /* My_Fride_FoodUITestsLaunchTests.swift */; };
+		52875E722F1A5E9A00FB42D1 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E712F1A5E9A00FB42D1 /* Login.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		52875E582F1A590E00FB42D1 /* My_Fride_FoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = My_Fride_FoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		52875E5C2F1A590E00FB42D1 /* My_Fride_FoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Fride_FoodUITests.swift; sourceTree = "<group>"; };
 		52875E5E2F1A590E00FB42D1 /* My_Fride_FoodUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Fride_FoodUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		52875E712F1A5E9A00FB42D1 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				52875E432F1A590C00FB42D1 /* ContentView.swift */,
 				52875E452F1A590E00FB42D1 /* Assets.xcassets */,
 				52875E472F1A590E00FB42D1 /* Preview Content */,
+				52875E712F1A5E9A00FB42D1 /* Login.swift */,
 			);
 			path = My_Fride_Food;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52875E722F1A5E9A00FB42D1 /* Login.swift in Sources */,
 				52875E442F1A590C00FB42D1 /* ContentView.swift in Sources */,
 				52875E422F1A590C00FB42D1 /* My_Fride_FoodApp.swift in Sources */,
 			);
