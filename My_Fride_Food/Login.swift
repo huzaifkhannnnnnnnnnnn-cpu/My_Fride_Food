@@ -1,22 +1,27 @@
-//
+
 //  Login.swift
 //  My_Fride_Food
 //
 //  Created by MacBook Pro on 16/01/2026.
-//
+
 
 import SwiftUI
 
 struct Login: View {
     @State private var Email : String = ""
     @State private var Password : String = ""
+    @State private var isLoginSuccess = false
     
     var body: some View {
         VStack( spacing: 15){
-            Text("Login")
+        
+            Spacer()
+            
+            Text("My Fridge Food")
                 .font(.largeTitle)
                 .fontWeight(.bold)
-             
+       
+            
             Text("Email")
                 .font(.headline)
                 .frame(maxWidth : .infinity , alignment: .leading)
@@ -39,21 +44,33 @@ struct Login: View {
                 .cornerRadius(10)
             
             Button("Login"){
-                print(Email)
-                print(Password)
+                if !Email.isEmpty && !Password.isEmpty{
+                    isLoginSuccess = true
+                }
+           
             }
             .padding()
             .frame(maxWidth: .infinity)
             .background(Color.blue)
             .foregroundColor(Color.white)
             .cornerRadius(10)
+            HStack{
+                Text("Don't have any account ")
+                NavigationLink("Sign Up"){
+                    Signup()
+                }
+            }
+            .font(.footnote)
+            Spacer()
             
+            NavigationLink("",destination: DashBoard() , isActive: $isLoginSuccess)
         }
+        .padding()
     }
 }
 
-struct Login_Previews: PreviewProvider {
-    static var previews: some View {
-        Login()
-    }
-}
+//struct Login_Previews: PreviewProvider {
+//    static var previews: some View {
+//        Login()
+//    }
+//}
