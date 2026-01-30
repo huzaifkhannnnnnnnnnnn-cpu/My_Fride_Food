@@ -14,8 +14,9 @@ struct Signup: View {
     @State private var isSignupSuccess = false
     @State private var showAlert = false
     @State private var alertMessage = ""
-    
+    @Environment(\.dismiss) var dismiss
     var body: some View {
+    
         VStack(spacing: 15) {
             
             Group {
@@ -83,7 +84,7 @@ struct Signup: View {
                 
                 HStack {
                     Text("Already have an account?")
-                    NavigationLink("Login") {
+                    NavigationLink("Login"){
                         Login()
                     }
                 }
@@ -94,6 +95,7 @@ struct Signup: View {
             
             NavigationLink("", destination: DashBoard(), isActive: $isSignupSuccess)
                 .padding()
+                .navigationBarBackButtonHidden(false)
                 .alert(isPresented: $showAlert) {
                     Alert(
                         title: Text("Error"),
@@ -104,7 +106,8 @@ struct Signup: View {
         }
         .padding()
 
-    }
+    
+}
 }
 
 struct Signup_Previews: PreviewProvider {

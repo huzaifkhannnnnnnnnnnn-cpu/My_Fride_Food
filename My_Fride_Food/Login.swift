@@ -13,6 +13,7 @@ struct Login: View {
     @State private var isLoginSuccess = false
     
     var body: some View {
+       
         VStack( spacing: 15){
         
             Spacer()
@@ -58,6 +59,7 @@ struct Login: View {
                 Text("Don't have any account ")
                 NavigationLink("Sign Up"){
                     Signup()
+                      
                 }
             }
             .font(.footnote)
@@ -66,9 +68,9 @@ struct Login: View {
             NavigationLink("",destination: DashBoard() , isActive: $isLoginSuccess)
         }
         .padding()
-    }
+    
 }
-
+}
 //struct Login_Previews: PreviewProvider {
 //    static var previews: some View {
 //        Login()

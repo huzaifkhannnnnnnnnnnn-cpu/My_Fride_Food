@@ -11,7 +11,9 @@ import SwiftUI
 struct My_Fride_FoodApp: App {
     var body: some Scene {
         WindowGroup {
+         
             Login()
+        
         }
     }
 }
