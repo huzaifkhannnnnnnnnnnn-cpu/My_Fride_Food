@@ -14,6 +14,8 @@ struct DashBoard: View {
                 DashBoardHeader()
                 RecentlyAdded()
                 UpcomingExpiration()
+                RecipeCard()
+             
             }
         }
     }
@@ -26,7 +28,7 @@ struct DashBoardHeader: View{
                     .font(.largeTitle)
                     .fontWeight(.bold)
                 
-                Spacer() // Greeting left, icons right
+                Spacer()
                 
                 HStack(spacing: 20) {
                     Image(systemName: "bell")
@@ -173,6 +175,42 @@ struct ExpiringRow: View{
         .shadow( radius: 2)
     }
 }
+struct RecipeCard: View{
+    var body: some View{
+        VStack(alignment: .leading, spacing: 15){
+            Text("Recommanded Recipe")
+                .font(.title2)
+                .fontWeight(.bold)
+            VStack(alignment: .leading, spacing: 12){
+                Image(systemName: "fork.knife.circle.fill")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 20)
+                    .foregroundColor(.green)
+                Text("Grilled Chiken salad")
+                    .font(.headline)
+                Text("Uses items that are about to expire")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+                Button("View Recipe"){
+                    
+                }
+                .padding(.vertical, 10)
+                .frame(maxWidth: .infinity)
+                .background(Color.green)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+            }
+            .padding()
+            .background(Color(.systemBackground))
+            .cornerRadius(15)
+            .shadow(radius: 3)
+        }
+        .padding()
+    }
+}
+
+ 
 struct DashBoard_Previews: PreviewProvider {
     static var previews: some View {
         DashBoard()

@@ -11,6 +11,7 @@ struct Login: View {
     @State private var Email : String = ""
     @State private var Password : String = ""
     @State private var isLoginSuccess = false
+    @EnvironmentObject var appState: AppState
     
     var body: some View {
        
@@ -46,7 +47,7 @@ struct Login: View {
             
             Button("Login"){
                 if !Email.isEmpty && !Password.isEmpty{
-                    isLoginSuccess = true
+                    appState.isLoggedIn = true
                 }
            
             }
@@ -65,7 +66,7 @@ struct Login: View {
             .font(.footnote)
             Spacer()
             
-            NavigationLink("",destination: DashBoard() , isActive: $isLoginSuccess)
+           
         }
         .padding()
     

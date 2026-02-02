@@ -14,6 +14,7 @@ struct Signup: View {
     @State private var isSignupSuccess = false
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @EnvironmentObject var appState: AppState
     @Environment(\.dismiss) var dismiss
     var body: some View {
     
@@ -73,7 +74,7 @@ struct Signup: View {
                         alertMessage = "Passwords do not match"
                         showAlert = true
                     } else {
-                        isSignupSuccess = true
+                        appState.isLoggedIn = true
                     }
                 }
                 .padding()
@@ -93,7 +94,7 @@ struct Signup: View {
             
             Spacer()
             
-            NavigationLink("", destination: DashBoard(), isActive: $isSignupSuccess)
+          
                 .padding()
                 .navigationBarBackButtonHidden(false)
                 .alert(isPresented: $showAlert) {

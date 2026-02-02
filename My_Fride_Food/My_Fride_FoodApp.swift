@@ -9,11 +9,11 @@ import SwiftUI
 
 @main
 struct My_Fride_FoodApp: App {
+ @StateObject var appState = AppState()
     var body: some Scene {
         WindowGroup {
-            NavigationView{
-            Welcome()
-            }
+            RootView()
+                .environmentObject(appState)
         }
     }
 }
