@@ -10,9 +10,9 @@ import SwiftUI
 struct FridgeView: View {
     @State private var items: [FridgeItem] = [
         FridgeItem(id: UUID(),
-                   name: "Green Apple", category: "Fruits", info: I"6 Units • Exp. 2 days"),
+                   name: "Green Apple", category: "Fruits", info: "6 Units • Exp. 2 days"),
         FridgeItem(id: UUID(), name: "Whole Milk", category: "Dairy", info: "1 liter • Exp. 5 days"),
-        FridgeItem(id:UUD(), name: "Eggs", category: "Protein", info: "1 dozen • Exp. 1 week")
+        FridgeItem(id:UUID(), name: "Eggs", category: "Protein", info: "1 dozen • Exp. 1 week")
       ]
     @State private var showAddScreen = false
     @State private  var selectedItem: FridgeItem? = nil
@@ -29,16 +29,18 @@ struct FridgeView: View {
     var body: some View {
         NavigationView {
         VStack{
-            TextField("Search items...", text: $searchText)
-                .frame(maxWidth: .infinity)
+            
+            TextField("Search items by name...", text: $searchText)
+                .autocapitalization(.none)
+                .disableAutocorrection(true)
                 .padding()
                 .background(Color.gray.opacity(0.1))
                 .cornerRadius(12)
-                .padding()
+                .padding(.horizontal)
             
             ScrollView{
                 VStack(spacing: 15){
-                    ForEach(items){item in
+                    ForEach(filteredItems){item in
                         FridgeItemCard(item: item ,
                                        onEdit:{
                             selectedItem = item
@@ -122,43 +124,36 @@ struct FridgeItemCard: View{
         
     }
 }
-struct AddItemView: View {
-
+struct AddItemView: View{
+    
     @Environment(\.dismiss) var dismiss
-
+    
     @State private var name: String
     @State private var category: String
     @State private var info: String
 
-    let onSave: (FridgeItem) -> Void
+    let onSave: (FridgeItem)-> Void
     private let itemID: UUID
-
-    init(item: FridgeItem? = nil, onSave: @escaping (FridgeItem) -> Void) {
+    
+    init(item: FridgeItem? = nil, onSave:@escaping (FridgeItem)-> Void ){
         self.onSave = onSave
         _name = State(initialValue: item?.name ?? "")
         _category = State(initialValue: item?.category ?? "")
         _info = State(initialValue: item?.info ?? "")
         itemID = item?.id ?? UUID()
     }
-
-    var body: some View {
-        NavigationView {
-            Form {
-                TextField("Item Name", text: $name)
+    var body: some View{
+        NavigationView{
+            Form{
+                TextField("Item name ", text: $name)
                 TextField("Category", text: $category)
-                TextField("Info", text: $info)
+                TextField("Info ", text: $info)
             }
             .navigationTitle("Item")
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button("Save") {
-                        let item = FridgeItem(
-                            id: itemID,
-                            name: name,
-                            category: category,
-                            info: info
-                        )
-
+            .toolbar{
+                ToolbarItem(placement: .navigationBarTrailing){
+                    Button("Save"){
+                        let item = FridgeItem(id: itemID, name: name, category: category, info: info)
                         onSave(item)
                         dismiss()
                     }
@@ -167,7 +162,6 @@ struct AddItemView: View {
         }
     }
 }
-
 
 struct FridgeView_Previews: PreviewProvider {
     static var previews: some View {

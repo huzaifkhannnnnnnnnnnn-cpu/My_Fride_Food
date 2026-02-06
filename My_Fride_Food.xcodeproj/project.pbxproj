@@ -23,6 +23,12 @@
 		52875E812F30CEA500FB42D1 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E802F30CEA500FB42D1 /* MainTabView.swift */; };
 		52875E832F30D22C00FB42D1 /* FridgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E822F30D22C00FB42D1 /* FridgeView.swift */; };
 		52875E852F30DAB000FB42D1 /* FridgeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52875E842F30DAB000FB42D1 /* FridgeItem.swift */; };
+		52B1B3192F360D3F0080907A /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B3182F360D3F0080907A /* Recipe.swift */; };
+		52B1B31B2F360E290080907A /* RecipeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B31A2F360E290080907A /* RecipeData.swift */; };
+		52B1B31D2F3610100080907A /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B31C2F3610100080907A /* RecipeView.swift */; };
+		52B1B31F2F3620940080907A /* RecipeViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B31E2F3620940080907A /* RecipeViewDetail.swift */; };
+		52B1B3212F3620FE0080907A /* IngredientsCheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B3202F3620FE0080907A /* IngredientsCheckView.swift */; };
+		52B1B3232F3622640080907A /* RecipeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52B1B3222F3622640080907A /* RecipeCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +68,12 @@
 		52875E802F30CEA500FB42D1 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		52875E822F30D22C00FB42D1 /* FridgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeView.swift; sourceTree = "<group>"; };
 		52875E842F30DAB000FB42D1 /* FridgeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FridgeItem.swift; sourceTree = "<group>"; };
+		52B1B3182F360D3F0080907A /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		52B1B31A2F360E290080907A /* RecipeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeData.swift; sourceTree = "<group>"; };
+		52B1B31C2F3610100080907A /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		52B1B31E2F3620940080907A /* RecipeViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewDetail.swift; sourceTree = "<group>"; };
+		52B1B3202F3620FE0080907A /* IngredientsCheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCheckView.swift; sourceTree = "<group>"; };
+		52B1B3222F3622640080907A /* RecipeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +125,8 @@
 			isa = PBXGroup;
 			children = (
 				52875E412F1A590C00FB42D1 /* My_Fride_FoodApp.swift */,
+				52B1B31A2F360E290080907A /* RecipeData.swift */,
+				52B1B3182F360D3F0080907A /* Recipe.swift */,
 				52875E802F30CEA500FB42D1 /* MainTabView.swift */,
 				52875E7E2F30CDF200FB42D1 /* RootView.swift */,
 				52875E772F2CCD2D00FB42D1 /* Welcome.swift */,
@@ -125,6 +139,10 @@
 				52875E7C2F30CD3A00FB42D1 /* AppState.swift */,
 				52875E822F30D22C00FB42D1 /* FridgeView.swift */,
 				52875E842F30DAB000FB42D1 /* FridgeItem.swift */,
+				52B1B31C2F3610100080907A /* RecipeView.swift */,
+				52B1B31E2F3620940080907A /* RecipeViewDetail.swift */,
+				52B1B3202F3620FE0080907A /* IngredientsCheckView.swift */,
+				52B1B3222F3622640080907A /* RecipeCard.swift */,
 			);
 			path = My_Fride_Food;
 			sourceTree = "<group>";
@@ -284,14 +302,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52B1B3232F3622640080907A /* RecipeCard.swift in Sources */,
 				52875E7F2F30CDF200FB42D1 /* RootView.swift in Sources */,
 				52875E722F1A5E9A00FB42D1 /* Login.swift in Sources */,
+				52B1B31F2F3620940080907A /* RecipeViewDetail.swift in Sources */,
 				52875E812F30CEA500FB42D1 /* MainTabView.swift in Sources */,
+				52B1B31B2F360E290080907A /* RecipeData.swift in Sources */,
+				52B1B3192F360D3F0080907A /* Recipe.swift in Sources */,
 				52875E742F2778EE00FB42D1 /* Signup.swift in Sources */,
 				52875E7D2F30CD3A00FB42D1 /* AppState.swift in Sources */,
 				52875E832F30D22C00FB42D1 /* FridgeView.swift in Sources */,
 				52875E762F27841200FB42D1 /* DashBoard.swift in Sources */,
+				52B1B3212F3620FE0080907A /* IngredientsCheckView.swift in Sources */,
 				52875E852F30DAB000FB42D1 /* FridgeItem.swift in Sources */,
+				52B1B31D2F3610100080907A /* RecipeView.swift in Sources */,
 				52875E442F1A590C00FB42D1 /* ContentView.swift in Sources */,
 				52875E782F2CCD2E00FB42D1 /* Welcome.swift in Sources */,
 				52875E422F1A590C00FB42D1 /* My_Fride_FoodApp.swift in Sources */,

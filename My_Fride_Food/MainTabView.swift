@@ -24,7 +24,7 @@ struct MainTabView: View {
                     Text("Fridge")
                 }
 
-            Text("Recipes Screen")
+            RecipeView()
                 .tabItem {
                     Image(systemName: "fork.knife")
                     Text("Recipes")
